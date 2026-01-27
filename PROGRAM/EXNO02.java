@@ -1,13 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package PROGRAM;
-
-/**
- *
- * @author Kavinkumar
- */
 import java.util.Scanner;
 public class EXNO02
 {
@@ -21,4 +11,5 @@ public class EXNO02
         int big = (a > b) ? a : b;
         System.out.println("Largest = " + big);
     }
+
 }
