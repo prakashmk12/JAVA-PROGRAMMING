@@ -1,0 +1,80 @@
+ 						LAB EXERCISES
+
+EX.NO:09
+
+					    IMPLEMENTING INTERFACE
+
+AIM:
+
+	To write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape Interface. Implement the getArea() method for each of the three classes.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Create an interface Shape with method getArea().
+	3)Create classes Rectangle, Triangle, and Circle implementing Shape.
+	4)Define getArea() for each class according to its shape.
+	5)In main, read necessary dimensions from the user, Create objects of each class and calculate their areas.
+	6)Display the areas of rectangle, triangle, and circle.
+	7)End the program.
+
+PROGRAM:
+
+import java.util.Scanner;
+interface Shape {
+    double getArea();
+}
+class Rectangle implements Shape {
+    double length, breadth;
+
+    Rectangle(double l, double b) {
+        length = l;
+        breadth = b;
+    }
+    public double getArea() {
+        return length * breadth;
+    }
+}
+class Circle implements Shape {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+    public double getArea() {
+        return 22.0 / 7.0 * radius * radius;
+    }
+}
+class Triangle implements Shape {
+    double base, height;
+    Triangle(double b, double h) {
+        base = b;
+        height = h;
+    }
+    public double getArea() {
+        return 0.5 * base * height;
+    }
+}
+class EXNO09 {
+    public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter Length and Breadth of Rectangle:");
+        double le = scan.nextDouble();
+        double br = scan.nextDouble();
+        Rectangle rect = new Rectangle(le, br);
+        System.out.println("Enter Base and Height of Triangle:");
+        double ba = scan.nextDouble();
+        double ht = scan.nextDouble();
+        Triangle tri = new Triangle(ba, ht);
+        System.out.println("Enter Radius of Circle:");
+        double r = scan.nextDouble();
+        Circle cir = new Circle(r);
+        System.out.println("Area of Rectangle: " + rect.getArea());
+        System.out.println("Area of Triangle: " + tri.getArea());
+        System.out.println("Area of Circle: " + cir.getArea());
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the areas of rectangle, triangle, and circle are displayed.

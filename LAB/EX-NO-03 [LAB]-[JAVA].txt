@@ -1,0 +1,39 @@
+ 					LAB EXERCISES
+
+EX.NO:03
+
+			    IMPLEMENTING COMMAND LINE ARGUMENTS
+
+AIM:
+
+ 	To write a Java program to implement command line arguments.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Read the radius value from command line arguments.
+	3)Convert the argument from String to float.
+	4)Declare a variable to store the area of the circle.
+	5)Calculate the area using the formula Area = 3.14 * r * r.
+	6)Optionally, format the area to two decimal places.
+	7)Handle invalid or missing input if any.
+	8)Display the radius.
+	9)Display the area of the circle.
+	10)End the program.
+
+PROGRAM:
+
+class EXNO03 
+{
+    public static void main(String args[]) {
+        float radius, area;
+        radius = Float.parseFloat(args[0]);
+        System.out.println("The radius of a circle is: " + radius);
+        area = 3.14f * radius * radius;
+        System.out.println("The area of a circle is: " + area);
+    }
+}
+
+RESULT:
+
+ 	Thus, the above Java program is executed successfully and the radius and area of the circle are displayed.

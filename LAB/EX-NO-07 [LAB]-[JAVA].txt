@@ -1,0 +1,66 @@
+						LAB EXERCISES
+
+EX.NO:07
+
+					  USING METHOD OVERLOADING
+
+AIM:
+
+	To write a Java program to calculate area of rectangle, triangle and square using method overloading.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Create a class Area with three overloaded findArea methods:
+		•For rectangle (length × breadth).
+		•For triangle (0.5 × base × height).
+		•For square (side × side).
+	3)In the main method, create an object of the Area class.
+	4)Read the length and breadth of the rectangle.
+	5)Call find Area for rectangle and store the result.
+	6)Read the base and height of the triangle.
+	7)Call find Area for triangle and store the result.
+	8)Read the side of the square.
+	9)Display the areas of the rectangle, triangle, and square.
+	10)End the program.
+
+
+PROGRAM:
+
+import java.util.Scanner;
+class Area {
+    double findArea(double length, double breadth) {
+        return length * breadth;
+    }
+    double findArea(double base, double height, boolean isTriangle) {
+        return 0.5 * base * height;
+    }
+    double findArea(double side) {
+        return side * side;
+    }
+}
+class EXNO07 {
+    public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
+        Area c = new Area();
+        System.out.println("Enter Length and Breadth of Rectangle:");
+        double le = scan.nextDouble();
+        double br = scan.nextDouble();
+        double rect = c.findArea(le, br);
+        System.out.println("Enter Base and Height of Triangle:");
+        double ba = scan.nextDouble();
+        double ht = scan.nextDouble();
+        double tri = c.findArea(ba, ht, true);
+        System.out.println("Enter Side of Square:");
+        double s = scan.nextDouble();
+        double square = c.findArea(s);
+        System.out.println("Area of the rectangle: " + rect);
+        System.out.println("Area of the triangle: " + tri);
+        System.out.println("Area of the square: " + square);
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the areas of rectangle, triangle, and square are displayed.
+

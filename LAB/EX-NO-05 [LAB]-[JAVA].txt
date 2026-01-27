@@ -1,0 +1,56 @@
+					LAB EXERCISES
+
+EX.NO:05
+
+				SORTING NAMES USING BUBBLE SORT
+
+AIM:
+
+	To write a Java Program to sort 10 student names in alphabetical order using bubble sort.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Import the Scanner class to read input from the user (import java.util.Scanner;).
+	3)Declare an array of strings to store 10 student names.
+	4)Read 10 student names from the user using a loop.
+	5)Implement bubble sort to arrange names in alphabetical order.
+	6)Compare names and swap if the current name is lexicographically greater than the next name.
+	7)Optionally, print a message indicating sorting is complete.
+	8)Close the Scanner to prevent resource leak.
+	9)Display the sorted names to the user.
+	10)End the program.
+
+
+PROGRAM:
+
+import java.util.Scanner;
+class EXNO05 {
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        String names[] = new String[10];
+        System.out.println("Enter 10 student names:");
+        for (int i = 0; i < names.length; i++) {
+            System.out.print("Name " + (i + 1) + ": ");
+            names[i] = s.nextLine();
+        }
+        for (int i = 0; i < names.length - 1; i++) {
+            for (int j = 0; j < names.length - 1 - i; j++) {
+                if (names[j].compareTo(names[j + 1]) > 0) {
+                    String temp = names[j];
+                    names[j] = names[j + 1];
+                    names[j + 1] = temp;
+                }
+            }
+        }
+        System.out.println("\nStudent names in alphabetical order:");
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]);
+        }
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the student names are displayed in alphabetical order.
+

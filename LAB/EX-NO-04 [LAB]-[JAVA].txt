@@ -1,0 +1,49 @@
+				        LAB EXERCISES
+
+EX.NO:04
+
+					USING ARRAYS
+
+AIM:
+
+	To write a Java program to find the sum and average of your tenth standard marks.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Import the Scanner class to read input from the user (import java.util.Scanner;).
+	3)Declare an integer array to store marks for 5 subjects.
+	4)Initialize a variable sum to 0 to hold the total of marks.
+	5)Create a Scanner object to read input from the user.
+	6)Use a loop to read marks for each subject and store them in the array.
+	7)Add each mark to sum inside the loop to calculate total marks.
+	8)Calculate the average as average = sum / 5.0.
+	9)Display the total marks and average marks to the user.
+	10)End the program.
+
+
+PROGRAM:
+
+import java.util.Scanner;
+class EX04 {
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        int marks[] = new int[5];
+        int sum = 0;
+        double aver;
+        System.out.println("Enter your tenth standard marks one by one:");
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Subject " + (i + 1) + ": ");
+            marks[i] = s.nextInt();
+            sum += marks[i];
+        }
+        aver = sum / 5.0;
+        System.out.println("Total Marks: " + sum);
+        System.out.println("Average Marks: " + aver);
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the total and average marks are displayed.
+

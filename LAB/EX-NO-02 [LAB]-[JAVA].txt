@@ -1,0 +1,44 @@
+					LAB EXERCISES
+
+EX.NO:02
+
+			LARGEST NUMBER USING CONDITIONAL OPERATOR
+
+AIM:
+
+	To write a Java program to read 2 integers and find the largest number using conditional operator.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Import the Scanner class.
+	3)Create a Scanner object.
+	4)Declare two integer variables.
+	5)Declare a variable to store the largest number.
+	6)Ask the user to enter two numbers.
+	7)Read the two numbers from the user.
+	8)Compare the numbers using the conditional operator.
+	9)Display the largest number.
+	10)End the program.
+
+
+PROGRAM:
+
+import java.util.Scanner;
+public class EXNO02 {
+    public static void main(String args[]) {
+        int a, b, big;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter two numbers:");
+        a = scan.nextInt();
+        b = scan.nextInt();
+        big = (a > b) ? a : b;
+        System.out.println("Largest = " + big);
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the largest number is displayed. 
+
+

@@ -1,0 +1,77 @@
+					LAB EXERCISES
+
+EX.NO:06
+
+				      USING CONSTRUCTORS
+
+AIM:
+
+	To write a Java program to collect student details using constructors.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Create a Student class with variables for name, age, roll number, and course.
+	3)Define a constructor to initialize student details.
+	4)Define a method display() to show student details.
+	5)In main, read the number of students from the user.	
+	6)Use a loop to read each student’s details and create Student objects.
+	7)Optionally, display a message before and after showing all students.
+	8)Handle invalid or missing input if any.
+	9)Display all student details using the display() method.
+	10)End the program.
+
+
+PROGRAM:
+
+import java.util.Scanner;
+class Student {
+    String name;
+    int age;
+    String rollno;
+    String course;
+    Student(String n, int a, String r, String c) {
+        name = n;
+        age = a;
+        rollno = r;
+        course = c;
+    }
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Roll Number: " + rollno);
+        System.out.println("Course: " + course);
+    }
+}
+public class EXNO06 {
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number of students: ");
+        int n = s.nextInt();
+        s.nextLine(); // Consume newline
+        Student students[] = new Student[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("\nEnter details for student " + (i + 1) + ":");
+            System.out.print("Name: ");
+            String name = s.nextLine();
+            System.out.print("Age: ");
+            int age = s.nextInt();
+            s.nextLine(); // Consume newline
+            System.out.print("Roll Number: ");
+            String rollno = s.nextLine();
+            System.out.print("Course: ");
+            String course = s.nextLine();
+            students[i] = new Student(name, age, rollno, course);
+        }
+        System.out.println("\nStudent Details:");
+        for (int i = 0; i < n; i++) {
+            students[i].display();
+            System.out.println();
+        }
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the details of all students are displayed.
+

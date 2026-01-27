@@ -1,0 +1,60 @@
+						 LAB EXERCISES
+
+EX.NO:10
+
+					     USING SWING COMPONENTS
+
+AIM:
+
+	To write a Java program to create a panel with three buttons, labeled Red, Blue and Yellow, so that clicking each button results in the background color changing to the appropriate color.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Import Swing and AWT packages for GUI components.
+	3)Create a JFrame as the main window.
+	4)Create a JPanel and three JButtons labeled Red, Blue, and Yellow.
+	5)Add buttons to the panel.
+	6)Define an ActionListener to change the panel’s background color based on the button clicked.
+	7)Add the panel to the frame and make the frame visible.
+
+PROGRAM:
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class EXNO10 {
+    public static void main(String args[]) {
+        JFrame frame = new JFrame("Color Changer");
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JPanel panel = new JPanel();
+        JButton redButton = new JButton("Red");
+        JButton blueButton = new JButton("Blue");
+        JButton yellowButton = new JButton("Yellow");
+        panel.add(redButton);
+        panel.add(blueButton);
+        panel.add(yellowButton);
+        ActionListener colorChanger = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == redButton) {
+                    panel.setBackground(Color.RED);
+                } else if (e.getSource() == blueButton) {
+                    panel.setBackground(Color.BLUE);
+                } else if (e.getSource() == yellowButton) {
+                    panel.setBackground(Color.YELLOW);
+                }
+            }
+        };
+        redButton.addActionListener(colorChanger);
+        blueButton.addActionListener(colorChanger);
+        yellowButton.addActionListener(colorChanger);
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and clicking each button changes the background color of the panel accordingly.
+

@@ -1,0 +1,41 @@
+					  LAB EXERCISES
+
+EX.NO:01
+
+				CELSIUS TO FAHRENHEIT CONVERSION
+
+AIM:
+
+	To write a Java program to read the temperature in Celsius and convert into Fahrenheit.
+
+ALGORITHM:
+
+	1) Start the program.
+	2) Import the Scanner class to read input from the user.
+	3) Create a Scanner object for input.
+	4) Declare a variable to store the temperature in Celsius.
+	5) Declare a variable to store the temperature in Fahrenheit.
+	6) Ask the user to enter the temperature in Celsius.
+	7) Read the temperature in Celsius from the user.
+	8) Convert Celsius to Fahrenheit using the formula F = (C × 9/5) + 32.
+	9) Display the temperature in Fahrenheit.
+	10) End the program.
+
+
+PROGRAM:
+
+import java.util.Scanner;
+class EXNO01 {
+    public static void main(String args[]) {
+        float cel, far;
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter temperature in Celsius:");
+        cel = s.nextFloat();
+        far = (cel * 9 / 5) + 32;
+        System.out.println("Temp in Fahrenheit: " + far);
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the temperature in Fahrenheit is displayed.

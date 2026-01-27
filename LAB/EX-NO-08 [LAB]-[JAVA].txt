@@ -1,0 +1,60 @@
+					LAB EXERCISES
+
+EX.NO:08
+
+			    INHERITANCE AND OVERRIDING METHODS
+
+AIM:
+
+	To write a Java program to create a class called Shape with methods called getPerimeter() and getArea(). Create a subclass called Circle that overrides the getPerimeter() and 	getArea() methods to calculate the area and perimeter of a circle.
+
+ALGORITHM:
+
+	1)Start the program.
+	2)Create a base class Shape with methods getPerimeter() and getArea() returning 0.0.
+	3)Create a subclass Circle that extends Shape and has a radius variable.
+	4)Override getPerimeter() to calculate perimeter as 2 * π * r.
+	5)Override getArea() to calculate area as π * r * r.
+	6)In main, read the radius of the circle from the user and create a Circle object, Display the perimeter and area of the circle.
+	7)End the program.
+
+PROGRAM:
+
+import java.util.Scanner;
+class Shape {
+    double getPerimeter() {
+        return 0.0;
+    }
+    double getArea() {
+        return 0.0;
+    }
+}
+class Circle extends Shape {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+    @Override
+    double getPerimeter() {
+        return 2 * 22.0 / 7.0 * radius;
+    }
+    @Override
+    double getArea() {
+        return 22.0 / 7.0 * radius * radius;
+    }
+}
+class EXNO8 {
+    public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter Radius of Circle:");
+        double rad = scan.nextDouble();
+        Circle circle = new Circle(rad);
+        System.out.println("Perimeter of the circle: " + circle.getPerimeter());
+        System.out.println("Area of the circle: " + circle.getArea());
+    }
+}
+
+RESULT:
+
+	Thus, the above Java program is executed successfully and the perimeter and area of the circle are displayed.
