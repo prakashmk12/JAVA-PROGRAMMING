@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class EXNO05 {
-    public static void main(String[] args) {
+ public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         String[] names = new String[10]; 
         System.out.println("Enter 10 student names:");
