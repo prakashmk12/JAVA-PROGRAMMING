@@ -1,7 +1,7 @@
 import java.util.Scanner;
 interface Shape {
     double getArea();
-}
+} 
 class Rectangle implements Shape {
     double length, breadth;
     Rectangle(double l, double b) {
