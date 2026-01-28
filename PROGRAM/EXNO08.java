@@ -22,7 +22,7 @@ class Circle extends Shape {
         return (22.0 / 7.0) * radius * radius;
     }
 }
-public class EXNO08 {
+public class EX08 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter Radius of Circle:");
